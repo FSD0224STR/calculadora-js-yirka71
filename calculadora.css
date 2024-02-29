@@ -1,0 +1,34 @@
+body {
+  background-color: aliceblue;
+  border: 2px solid blue;
+  height: 800px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.cajas {
+  color: black;
+  border: 1px solid blue;
+}
+.secciones {
+  border: 2px solid red;
+  padding: 20px;
+}
+
+#calculos {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+button {
+  background-color: grey;
+  font-size: x-large;
+}

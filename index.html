@@ -4,6 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css" />
   </head>
-  <body></body>
+  <body>
+    <section class="cajas secciones" id="calculos">
+      <div class="cajas resultado">Arriba</div>
+      <div class="cajas memoria">Abajo</div>
+    </section>
+    <section class="cajas secciones botones">
+      <!-- En los nombres de los botonos se usa el lenguaje de marcado  MathML para escribir las expreciones matematicas de las operaciones que se realizaran con nuestra calculculadora. -->
+      <button>%</button>
+      <button>CE</button>
+      <button>C</button>
+      <button>
+        <img src="./imagenes/eliminar.png" alt="eliminar" width="30px" />
+      </button>
+
+      <button>1/x</button>
+      <button>
+        <math>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </math>
+      </button>
+      <button>
+        <math>
+          <mroot>
+            <mn><mo></mo>x</mn>
+            <mn>2</mn>
+          </mroot>
+        </math>
+      </button>
+      <button>
+        <img src="./imagenes/division.png" alt="dividir" width="30px" />
+      </button>
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>x</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>-</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>+</button>
+
+      <button>+/-</button>
+      <button>0</button>
+      <button>,</button>
+      <button>=</button>
+    </section>
+  </body>
 </html>
