@@ -1,19 +1,16 @@
 #principal {
-  border: 2px solid black;
   height: 800px;
-  width: 600px;
+  width: 800px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr;
 }
 button {
-  background-color: grey;
   font-size: x-large;
 }
 
 .secciones {
-  background-color: rgb(98, 94, 94);
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 15px;
 }
 
@@ -25,13 +22,22 @@ button {
 
 .botones {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
 }
 
-section > button {
-  background-color: rgb(210, 210, 234);
+#benormales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+
+#bespeciales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .calculos > input {
   text-align: right;
 }
@@ -41,4 +47,12 @@ section > button {
 }
 .calculos > input#memoria {
   font-size: small;
+}
+
+.botones > div#bespeciales > button {
+  background-color: rgb(241, 235, 235);
+}
+
+.botones > div#benormales > button {
+  background-color: rgb(219, 216, 216);
 }
