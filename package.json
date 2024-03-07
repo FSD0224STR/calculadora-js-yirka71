@@ -1,0 +1,22 @@
+{
+  "name": "calculadora-js-yirka71",
+  "version": "1.0.0",
+  "description": "Calculadora básica ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FSD0224STR/calculadora-js-yirka71.git"
+  },
+  "author": "Yirka Contreras Ynfante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FSD0224STR/calculadora-js-yirka71/issues"
+  },
+  "homepage": "https://github.com/FSD0224STR/calculadora-js-yirka71#readme",
+  "dependencies": {
+    "mathjs": "^12.4.0"
+  }
+}

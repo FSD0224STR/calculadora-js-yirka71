@@ -1,65 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
     <link rel="stylesheet" href="calculadora.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.2.0/math.min.js"
+      defer
+    ></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <section class="cajas secciones" id="calculos">
-      <div class="cajas resultado">Arriba</div>
-      <div class="cajas memoria">Abajo</div>
-    </section>
-    <section class="cajas secciones botones">
-      <!-- En los nombres de los botonos se usa el lenguaje de marcado  MathML para escribir las expreciones matematicas de las operaciones que se realizaran con nuestra calculculadora. -->
-      <button>%</button>
-      <button>CE</button>
-      <button>C</button>
-      <button>
-        <img src="./imagenes/eliminar.png" alt="eliminar" width="30px" />
-      </button>
+    <section id="principal">
+      <section class="secciones calculos">
+        <input id="entrada" placeholder="0" />
+        <input id="memoria" placeholder="memoria" readonly />
+      </section>
+      <section class="secciones botones">
+        <button>operacion x</button>
+        <button>operacion y</button>
+        <button onclick="limpiarentrada()">AC</button>
+        <button onclick="eliminarvalor()">C</button>
 
-      <button>1/x</button>
-      <button>
-        <math>
-          <msup>
-            <mi>x</mi>
-            <mn>2</mn>
-          </msup>
-        </math>
-      </button>
-      <button>
-        <math>
-          <mroot>
-            <mn><mo></mo>x</mn>
-            <mn>2</mn>
-          </mroot>
-        </math>
-      </button>
-      <button>
-        <img src="./imagenes/division.png" alt="dividir" width="30px" />
-      </button>
+        <button>1/x</button>
+        <button>
+          <math>
+            <msup>
+              <mi>x</mi>
+              <mn>2</mn>
+            </msup>
+          </math>
+        </button>
+        <button>
+          <math>
+            <mroot>
+              <mn><mo></mo>x</mn>
+              <mn>2</mn>
+            </mroot>
+          </math>
+        </button>
+        <button>/</button>
 
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>x</button>
+        <button onclick="insertarvalor(7)">7</button>
+        <button onclick="insertarvalor(8)">8</button>
+        <button onclick="insertarvalor(9)">9</button>
+        <button onclick="insertarvalor('*')">x</button>
 
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>-</button>
+        <button onclick="insertarvalor(4)">4</button>
+        <button onclick="insertarvalor(5)">5</button>
+        <button onclick="insertarvalor(6)">6</button>
+        <button onclick="insertarvalor('-')">-</button>
 
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>+</button>
+        <button onclick="insertarvalor(1)">1</button>
+        <button onclick="insertarvalor(2)">2</button>
+        <button onclick="insertarvalor(3)">3</button>
+        <button onclick="insertarvalor('+')">+</button>
 
-      <button>+/-</button>
-      <button>0</button>
-      <button>,</button>
-      <button>=</button>
+        <button>+/-</button>
+        <button onclick="insertarvalor(0)">0</button>
+        <button onclick="insertarvalor('.')">.</button>
+        <button onclick="calcular()">=</button>
+      </section>
     </section>
   </body>
 </html>
+
+<!-- CE (Clear error):
+Elimina el número mostrado. Se utiliza para cuando se comete un error en el ingreso de datos pero sin eliminar todo el calculo que se encuentra realizando. -->
+
+<!-- MC (Memory Clear):
+Elimina cualquier número almacenado en memoria.
+
+Combinación de teclas: CTRL+L
+
+
+MR (Memory Recall):
+Recupera el número almacenado en memoria. El número permanece en memoria.
+Combinación de teclas: CTRL+R
+
+
+MS (Memory Storage):
+Almacena en memoria el número mostrado.
+Combinación de teclas: CTRL+M
+
+M+:
+Suma el número mostrado a otro número que se encuentre en memoria pero no muestra la suma de estos números.
+Combinación de teclas: CTRL+P
+
+ 
+
+M-:
+Resta el número mostrado a otro número que se encuentre en memoria pero no muestra la resta de estos números.
+Combinación de teclas: CTRL+Q
+CE (Clear error):
+Elimina el número mostrado. Se utiliza para cuando se comete un error en el ingreso de datos pero sin eliminar todo el calculo que se encuentra realizando.
+Combinación de teclas: SUPRIMIR
+C (Clear):
+Elimina todo el cálculo actual.
+Combinación de teclas: ESC
+
+ 
+
+Saludos!
+
+  -->

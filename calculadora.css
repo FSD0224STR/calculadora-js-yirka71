@@ -1,25 +1,26 @@
-body {
-  background-color: aliceblue;
-  border: 2px solid blue;
+#principal {
+  border: 2px solid black;
   height: 800px;
   width: 600px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr;
 }
-
-.cajas {
-  color: black;
-  border: 1px solid blue;
+button {
+  background-color: grey;
+  font-size: x-large;
 }
+
 .secciones {
-  border: 2px solid red;
-  padding: 20px;
+  background-color: rgb(98, 94, 94);
+  border: 2px solid black;
+  padding: 15px;
 }
 
-#calculos {
+.calculos {
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
 }
 
 .botones {
@@ -28,7 +29,16 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-button {
-  background-color: grey;
-  font-size: x-large;
+section > button {
+  background-color: rgb(210, 210, 234);
+}
+.calculos > input {
+  text-align: right;
+}
+.calculos > input#entrada {
+  font-size: xx-large;
+  background-color: white;
+}
+.calculos > input#memoria {
+  font-size: small;
 }
